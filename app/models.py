@@ -1,6 +1,5 @@
 from app.create_app import db
 from sqlalchemy import Column, String
-
 from flask_login import UserMixin
 
 
@@ -16,5 +15,3 @@ class User(db.Model, UserMixin):
             return str(self.uid)
         except AttributeError:
             raise NotImplementedError("No `id` attribute - override `get_id`") from None
-
-
