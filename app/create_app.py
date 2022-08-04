@@ -2,11 +2,11 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from app.config import DevConfig
-from app.logs import get_logger_handler
-from app.deep_learning.character_rec import CharacterRec
+from app.deep_learning.speech_rec import SpeechRec
+from app.deep_learning.image_rec import CharacterRec
 
 character_recognizer = CharacterRec()
-
+speech_recognier = SpeechRec()
 
 static_conf = {
     'template_folder': 'templates',
