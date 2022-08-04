@@ -40,7 +40,6 @@ class Account(Resource):
         else:
             return jsonify({'status': 0, 'msg': 'account not found'})
 
-    @login_required
     def post(self):
         # print(current_user.uid)
         # print(current_user.is_authenticated)

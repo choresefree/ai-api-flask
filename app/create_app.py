@@ -24,6 +24,4 @@ login_manager.login_message_category = 'info'
 login_manager.login_message = 'Access denied.'
 login_manager.init_app(app)
 
-''' logs'''
-app.logger.addHandler(get_logger_handler())
-app.logger.info("Launch")
+
