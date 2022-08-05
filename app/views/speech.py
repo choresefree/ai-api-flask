@@ -5,7 +5,7 @@ from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from werkzeug.datastructures import FileStorage
 from werkzeug.utils import secure_filename, redirect
-from app.create_app import speech_recognier
+from app.create_app import speech_recognizer
 
 
 class SpeechWarehouse(Resource):
@@ -61,7 +61,7 @@ class SpeechRecognizer(Resource):
         speech = self.req.speech
         file_name = secure_filename(speech.filename)
         if file_name.endswith('.mp3') or file_name.endswith('.wav'):
-            return jsonify({'status': 1, 'msg': speech_recognier.predict(speech)})
+            return jsonify({'status': 1, 'msg': speech_recognizer.predict(speech)})
         else:
             return jsonify({'status': 0, 'msg': 'File format is not supported'})
 

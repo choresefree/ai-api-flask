@@ -6,7 +6,7 @@ from app.deep_learning.speech_rec import SpeechRec
 from app.deep_learning.image_rec import CharacterRec
 
 character_recognizer = CharacterRec()
-speech_recognier = SpeechRec()
+speech_recognizer = SpeechRec()
 
 static_conf = {
     'template_folder': 'templates',
